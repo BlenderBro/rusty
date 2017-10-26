@@ -73,6 +73,29 @@ module.exports = [
         "clobbers": [
             "window.plugins.socialsharing"
         ]
+    },
+    {
+        "file": "plugins/cordova-plugin-admob-simple/www/AdMob.js",
+        "id": "cordova-plugin-admob-simple.AdMob",
+        "pluginId": "cordova-plugin-admob-simple",
+        "clobbers": [
+            "window.plugins.AdMob"
+        ]
+    },
+    {
+        "file": "plugins/cordova-plugin-google-analytics/www/analytics.js",
+        "id": "cordova-plugin-google-analytics.UniversalAnalytics",
+        "pluginId": "cordova-plugin-google-analytics",
+        "clobbers": [
+            "analytics",
+            "ga"
+        ]
+    },
+    {
+        "file": "plugins/cordova-plugin-google-analytics/browser/UniversalAnalyticsProxy.js",
+        "id": "cordova-plugin-google-analytics.UniversalAnalyticsProxy",
+        "pluginId": "cordova-plugin-google-analytics",
+        "runs": true
     }
 ];
 module.exports.metadata = 
@@ -86,7 +109,10 @@ module.exports.metadata =
     "cordova-plugin-compat": "1.1.0",
     "cordova-plugin-camera": "2.4.1",
     "es6-promise-plugin": "4.1.0",
-    "cordova-plugin-x-socialsharing": "5.2.1"
+    "cordova-plugin-x-socialsharing": "5.2.1",
+    "cordova-admob-sdklibs": "2.1.6",
+    "cordova-plugin-admob-simple": "3.3.4",
+    "cordova-plugin-google-analytics": "1.8.3"
 }
 // BOTTOM OF METADATA
 });

@@ -23,6 +23,14 @@
                         {
                             "xml": "<feature name=\"SocialSharing\"><param name=\"android-package\" value=\"nl.xservices.plugins.SocialSharing\" /></feature>",
                             "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"AdMob\"><param name=\"android-package\" value=\"com.cupertino.cordova.plugin.AdMob\" /><param name=\"onload\" value=\"true\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"UniversalAnalytics\"><param name=\"android-package\" value=\"com.danielcwilson.plugins.analytics.UniversalAnalyticsPlugin\" /></feature>",
+                            "count": 1
                         }
                     ]
                 }
@@ -32,6 +40,14 @@
                     "/*": [
                         {
                             "xml": "<uses-permission android:name=\"android.permission.WRITE_EXTERNAL_STORAGE\" />",
+                            "count": 2
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.INTERNET\" />",
+                            "count": 2
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\" />",
                             "count": 2
                         }
                     ],
@@ -44,6 +60,26 @@
                     "/manifest/application": [
                         {
                             "xml": "<provider android:authorities=\"${applicationId}.sharing.provider\" android:exported=\"false\" android:grantUriPermissions=\"true\" android:name=\"nl.xservices.plugins.FileProvider\"><meta-data android:name=\"android.support.FILE_PROVIDER_PATHS\" android:resource=\"@xml/sharing_paths\" /></provider>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<activity android:configChanges=\"keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize\" android:name=\"com.google.android.gms.ads.AdActivity\" android:theme=\"@android:style/Theme.Translucent\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<receiver android:enabled=\"true\" android:name=\"com.google.android.gms.analytics.AnalyticsReceiver\"><intent-filter><action android:name=\"com.google.android.gms.analytics.ANALYTICS_DISPATCH\" /></intent-filter></receiver>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<service android:enabled=\"true\" android:exported=\"false\" android:name=\"com.google.android.gms.analytics.AnalyticsService\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<receiver android:enabled=\"true\" android:exported=\"true\" android:name=\"com.google.android.gms.analytics.CampaignTrackingReceiver\"><intent-filter><action android:name=\"com.android.vending.INSTALL_REFERRER\" /></intent-filter></receiver>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<service android:enabled=\"true\" android:exported=\"false\" android:name=\"com.google.android.gms.analytics.CampaignTrackingService\" />",
                             "count": 1
                         }
                     ]
@@ -74,6 +110,15 @@
             "PACKAGE_NAME": "org.devgirl.framework7.mediaexplorer"
         },
         "cordova-plugin-x-socialsharing": {
+            "PACKAGE_NAME": "org.devgirl.framework7.mediaexplorer"
+        },
+        "cordova-admob-sdklibs": {
+            "PACKAGE_NAME": "org.devgirl.framework7.mediaexplorer"
+        },
+        "cordova-plugin-admob-simple": {
+            "PACKAGE_NAME": "org.devgirl.framework7.mediaexplorer"
+        },
+        "cordova-plugin-google-analytics": {
             "PACKAGE_NAME": "org.devgirl.framework7.mediaexplorer"
         }
     },
@@ -140,6 +185,23 @@
             "clobbers": [
                 "window.plugins.socialsharing"
             ]
+        },
+        {
+            "id": "cordova-plugin-admob-simple.AdMob",
+            "file": "plugins/cordova-plugin-admob-simple/www/AdMob.js",
+            "pluginId": "cordova-plugin-admob-simple",
+            "clobbers": [
+                "window.plugins.AdMob"
+            ]
+        },
+        {
+            "id": "cordova-plugin-google-analytics.UniversalAnalytics",
+            "file": "plugins/cordova-plugin-google-analytics/www/analytics.js",
+            "pluginId": "cordova-plugin-google-analytics",
+            "clobbers": [
+                "analytics",
+                "ga"
+            ]
         }
     ],
     "plugin_metadata": {
@@ -150,6 +212,9 @@
         "cordova-plugin-splashscreen": "4.0.3",
         "cordova-plugin-statusbar": "1.0.1",
         "es6-promise-plugin": "4.1.0",
-        "cordova-plugin-x-socialsharing": "5.2.1"
+        "cordova-plugin-x-socialsharing": "5.2.1",
+        "cordova-admob-sdklibs": "2.1.6",
+        "cordova-plugin-admob-simple": "3.3.4",
+        "cordova-plugin-google-analytics": "1.8.3"
     }
 }

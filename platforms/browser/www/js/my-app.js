@@ -13,6 +13,7 @@ var mainView = myApp.addView('.view-main', {
 
 // Handle Cordova Device Ready Event
 $$(document).on('deviceready', function() {
+    initAd();
 
 });
 
@@ -56,6 +57,7 @@ $$(document).on('pageInit', function (e) {
     // Get page data from event data
     var page = e.detail.page;
     if (page.name === 'picture') {  
+        showBannerFunc();
         document.getElementById("bar").style.display = 'none';      
         document.getElementById("btn").addEventListener('click', function(){
             navigator.camera.getPicture(function(result){                             
@@ -191,3 +193,52 @@ $$(document).on('pageInit', '.page[data-page="about"]', function (e) {
     // Following code will be executed for page with data-page attribute equal to "about"
     //myApp.alert('Here comes About page');
 })
+
+function initAd(){
+    if ( window.plugins && window.plugins.AdMob ) {
+        var ad_units = {
+            android : {
+                banner: 'ca-app-pub-7726043422573758/7006493458',		//PUT ADMOB ADCODE HERE 
+            }
+        };
+        var admobid = ( /(android)/i.test(navigator.userAgent) ) ? ad_units.android : ad_units.ios;
+
+        window.plugins.AdMob.setOptions( {
+            publisherId: admobid.banner,
+            //publisherId: 'ca-app-pub-7726043422573758~1298515984',
+            //interstitialAdId: admobid.interstitial,
+            adSize: window.plugins.AdMob.AD_SIZE.SMART_BANNER,	//use SMART_BANNER, BANNER, LARGE_BANNER, IAB_MRECT, IAB_BANNER, IAB_LEADERBOARD 
+            bannerAtTop: false, // set to true, to put banner at top 
+            overlap: true, // banner will overlap webview 
+            offsetTopBar: false, // set to true to avoid ios7 status bar overlap 
+            isTesting: false, // receiving test ad 
+            autoShow: true // auto show interstitial ad when loaded 
+        });
+        console.log('Not Testing..');
+
+        registerAdEvents();
+    } else {
+        //alert( 'admob plugin not ready' ); 
+    }
+}
+//functions to allow you to know when ads are shown, etc. 
+function registerAdEvents() {
+    document.addEventListener('onReceiveAd', function(){});
+    document.addEventListener('onFailedToReceiveAd', function(data){});
+    document.addEventListener('onPresentAd', function(){});
+    document.addEventListener('onDismissAd', function(){ });
+    document.addEventListener('onLeaveToAd', function(){ });
+    document.addEventListener('onReceiveInterstitialAd', function(){ });
+    document.addEventListener('onPresentInterstitialAd', function(){ });
+    document.addEventListener('onDismissInterstitialAd', function(){ });
+}
+
+//display the banner 
+function showBannerFunc(){
+    window.plugins.AdMob.createBannerView();
+}
+//display the interstitial 
+function showInterstitialFunc(){
+    window.plugins.AdMob.createInterstitialView();	//get the interstitials ready to be shown and show when it's loaded. 
+    window.plugins.AdMob.requestInterstitialAd();
+}

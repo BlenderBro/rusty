@@ -24,6 +24,12 @@
         },
         "cordova-plugin-x-socialsharing": {
             "PACKAGE_NAME": "org.devgirl.framework7.mediaexplorer"
+        },
+        "cordova-plugin-admob-simple": {
+            "PACKAGE_NAME": "org.devgirl.framework7.mediaexplorer"
+        },
+        "cordova-plugin-google-analytics": {
+            "PACKAGE_NAME": "org.devgirl.framework7.mediaexplorer"
         }
     },
     "dependent_plugins": {
@@ -31,6 +37,9 @@
             "PACKAGE_NAME": "org.devgirl.framework7.mediaexplorer"
         },
         "es6-promise-plugin": {
+            "PACKAGE_NAME": "org.devgirl.framework7.mediaexplorer"
+        },
+        "cordova-admob-sdklibs": {
             "PACKAGE_NAME": "org.devgirl.framework7.mediaexplorer"
         }
     }
