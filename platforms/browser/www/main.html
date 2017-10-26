@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com"> -->
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+
+    
+    <title>Love Test</title>
+
+
+    <link rel="stylesheet" href="lib/framework7/css/framework7.material.min.css">
+    <link rel="stylesheet" href="lib/framework7/css/framework7.material.colors.min.css">
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <!-- Status bar overlay for full screen mode (PhoneGap) -->
+    <div class="statusbar-overlay"></div>
+    <!-- Panels overlay-->
+    <div class="panel-overlay"></div>
+    <!-- Views -->
+    <div class="views">
+        <!-- Your main view, should have "view-main" class -->
+        <div class="view view-main">
+            <!-- Pages container, because we use fixed-through navbar and toolbar, it has additional appropriate classes-->
+            <div class="pages navbar-through toolbar-through">
+                <!-- Page, "data-page" contains page name -->
+                <div data-page="main" id="background" class="page">
+                    <!-- Scrollable page content -->
+                    <div id="container" class="page-content">                    
+                        <div class="col-100 tablet-50 galcard">
+                            <h2 class="cta">TAKE THE LOVE TEST</h2>
+                            <!-- <a href="picture.html"><i class="icon icon-gallery color-font"></i></a> -->
+                            <a href="picture.html"><img style="width:20%;" src="./img/test2.png" alt=""></a>
+                        </div>         
+                    </div>
+                </div>            
+            </div>
+            <!-- Bottom Toolbar-->
+            <div id="bar" class="toolbar">
+                <div class="toolbar-inner">
+                    <!-- Toolbar links -->
+                    <!-- <a href="about.html" class="link">How this works</a> -->
+                    <a href="about.html" class="link">How this works</a>
+                    <!-- <a href="#" class="link">Legal</a>                     -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="cordova.js"></script>  
+    <script type="text/javascript" src="lib/framework7/js/framework7.min.js"></script>     
+    <script type="text/javascript" src="js/my-app.js"></script>
+</body>
+
+</html>

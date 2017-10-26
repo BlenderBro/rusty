@@ -1,0 +1,221 @@
+/*
+   statusbar-overlay sets the background color for the overlay. Black text is the default when the statusbar plugin is not added. When the
+   statusbar plugin is added, it also adds default setting to make the content white via:
+
+       <preference name="StatusBarStyle" value="lightcontent"/>
+
+   Setting the background color to black will allow the default light content (white text/icons) to show on it. The statusbar plugin is included
+   in the config.xml file and will be added by the CLI when you build locally.
+
+   See https://github.com/apache/cordova-plugin-statusbar
+*/
+.color-gri{
+    background-color: #F5F5F5;
+}
+.color-text{
+    color: #7C80A9;
+}
+.color-font{
+    color: #717171;
+}
+
+h1 h2 h3 h4 h5 {
+    color: #717171;
+}
+
+h2{
+    font-size: 20px;
+    font-weight: 500;
+    color: #717171;
+    text-align: center;
+    margin: 0 16px;
+    position: relative;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    
+}
+h3{
+    font-size: 15px;
+    font-weight: 500;
+    color: #717171;
+}
+li{
+    color: #717171;
+}
+h2.cta{
+    color: white;
+}
+h3{
+    font-size: 15px;
+}
+h4{
+    font-size: 10px;
+}
+
+p{
+    color: #717171;
+}
+
+.statusbar-overlay {
+    background: #000000;
+}
+
+.goaway{
+    display: none;
+}
+
+.navbar{
+    background-color: whitesmoke;
+}
+
+i.icon.icon-bars{
+    background-image: url("../ico/more.svg");
+}
+i.icon.icon-back{
+    background-image: url("../ico/back.svg");
+}
+#background{
+    background-image: url('../img/bcg.png');
+}
+.icon-gallery{
+    background-image: url("../ico/like.svg");
+    width: 1px;
+    padding: 40px;
+    margin-bottom: 1.3em;
+}
+
+#container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+div[class*="col-"] {
+    background: #fff;
+    text-align: center;
+    color: #000;
+    /* border: 1px solid #ddd; */
+    /* padding: 25px; */
+    margin: 15px;
+  }
+  .galcard{
+    background-color: #c0392b !important;
+    border-radius: 10px;
+}
+.galcard h2{
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+.toolbar-inner h4 a{
+    color: white;
+}
+.cta{
+    padding-top: 4em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.row{
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+
+    -webkit-box-orient: horizontal; 
+    -moz-box-orient: horizontal;
+    box-orient: horizontal;
+    flex-direction: row;
+
+    -webkit-box-pack: center;
+    -moz-box-pack: center;
+    box-pack: center;
+    justify-content: center;
+
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    box-align: center;  
+    align-items: center;
+}
+.cell{
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    box-flex: 1;
+    -webkit-flex: 1 1 auto;
+    flex: 1 1 auto; 
+    text-align: center;
+}
+#pick{
+    background-color: whitesmoke;
+    border-radius: 20px;
+}
+.timer{
+    background-color:#e74c3c;
+    position: absolute; 
+    bottom:50px;
+    height: 5em;
+    width: 20em;
+    display: flex;    
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    z-index: 99999;
+}
+.counter h2{
+    color: white;
+}
+.working{
+    height: 100%;
+    
+    /* background-image: url("../img/wait.gif");
+    background-repeat: no-repeat; */
+}
+.working h2{
+    padding-top: 8em;
+}
+.results{
+    height: 100%;
+    
+}
+.results h1{
+    padding-top: 1em;
+    font-size: 30px;
+    font-weight: 500;
+    color: #717171;
+    text-align: center;
+    margin: 0 16px;
+    position: relative;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+#heart{
+    padding-top: 2em; 
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+}
+.social{
+    padding-top: 3em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.social .fb{
+    background-image: url("../ico/facebook.svg");
+    background-repeat: no-repeat;
+    border:none;
+    width:50px;
+    height:50px;
+    margin-right: 3em;
+}
+.social .tw{
+    background-image: url("../ico/twitter.svg");
+    background-repeat: no-repeat;
+    border-radius: 7px;
+    border:none;
+    width:50px;
+    height:50px;
+    padding-right: 3em !important;
+}

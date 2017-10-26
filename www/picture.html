@@ -1,0 +1,56 @@
+<div class="picture">
+    <div data-page="picture" class="page" id="background">
+        <div class="page-content" id="pick">
+
+            <!-- Intermediary page for ads  -->
+            <div id="stepThree" style="display:none;" class="working">
+                <h2>Please wait. Calculating...</h2>
+                <div class="cell">
+                        <img style="display:none" id="rawImg" height="100%" width="100%">  
+                    </div>
+            </div>
+
+            <!-- // Intermediary page for ads  -->
+
+            <!-- Picking a photo CTA and timer-->
+            <div id="stepTwo" class="content-block wcard">
+                <div id="temp" class="about-text cta">
+                    <h2>Tap the button to open your gallery</h2>
+                    <p>Pick a photo and stare at it for 10 seconds</p>
+                    <a href="#" id="btn" class="button button-big button-fill button-raised color-blue">Pick a photo</a>                    
+                </div>
+                <div class="row">
+                    <div class="cell">
+                        <img id="imgPath" width="100%">  
+                    </div>
+                </div>
+                <div class="row">
+                    <div style="display:none;" id="timer" class="timer">
+                        <div class="counter">
+                            <h2>Stare at the photo</h2>
+                            <h2 id="ctdown">10</h2>
+                        </div>
+                    </div>
+                </div>                
+            </div>
+            <!-- // Picking a photo CTA and timer -->
+
+            <!-- Results -->
+             <div style="display:none" id="results" class="results">
+                <div id="heart">
+                    <img class="heart" src="./ico/like.svg" style="height:60px" alt="heart">
+                </div>
+                <h2>We estimate:</h2>
+                <h1 id="showPercentage" class="showPercentage"></h1>
+                <div class="social">
+                    <button class="fb" onclick="window.plugins.socialsharing.shareViaFacebook('Message via Facebook', null /* img */, null /* url */, function() {console.log('share ok')}, function(errormsg){alert(errormsg)})"></button>
+                    <button class="tw" onclick="window.plugins.socialsharing.shareViaTwitter(' ')"></button>
+                </div>
+                
+             </div>
+
+            <!-- // Results -->
+        </div>
+    </div>
+</div>
+    

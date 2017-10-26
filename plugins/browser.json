@@ -1,0 +1,37 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-browsersync": {
+            "PACKAGE_NAME": "org.devgirl.framework7.mediaexplorer"
+        },
+        "cordova-plugin-console": {
+            "PACKAGE_NAME": "org.devgirl.framework7.mediaexplorer"
+        },
+        "cordova-plugin-statusbar": {
+            "PACKAGE_NAME": "org.devgirl.framework7.mediaexplorer"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "org.devgirl.framework7.mediaexplorer"
+        },
+        "cordova-plugin-camera": {
+            "PACKAGE_NAME": "org.devgirl.framework7.mediaexplorer"
+        },
+        "cordova-plugin-x-socialsharing": {
+            "PACKAGE_NAME": "org.devgirl.framework7.mediaexplorer"
+        }
+    },
+    "dependent_plugins": {
+        "cordova-plugin-compat": {
+            "PACKAGE_NAME": "org.devgirl.framework7.mediaexplorer"
+        },
+        "es6-promise-plugin": {
+            "PACKAGE_NAME": "org.devgirl.framework7.mediaexplorer"
+        }
+    }
+}
